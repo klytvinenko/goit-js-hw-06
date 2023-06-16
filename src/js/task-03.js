@@ -14,4 +14,11 @@ const images = [
 ];
 
 const navEl = document.querySelector('.gallery');
+const photoGal = images.map (({url, alt}) => `<li class = "li-item">
+<img src = "${url}" alt = "${alt} class = "photo-gal" width = 350 >
+</li>`
+  )
+  .join("");
+
+navEl.insertAdjacentHTML("beforeend", photoGal);
 console.log(navEl);
