@@ -6,9 +6,12 @@ console.dir(inputValue);
 inputValue.addEventListener('input', onInput);
 
 function onInput(event) {
-    nameValue.textContent = event.currentTarget.value;
-    return 
-    if(event.currentTarget.value === 'false') {
-        nameValue.textContent = 'Anonimus'
+    
+    
+    if(event.currentTarget.value !== '') {
+        nameValue.textContent = event.currentTarget.value;
+    } else {
+        nameValue.textContent = 'Anonimus';
     }
+    
 }
