@@ -18,20 +18,14 @@ const ingredients = [
 // listUl.appendChild(listItem);
 // console.log(listUl);
 
-const navItemEl = document.createElement('ul');
-navItemEl.id = 'ingredients';
-
-ingredients.forEach((item) => {
-  const navLinkItem = document.createElement('li');
-  navLinkItem.classList.add('item');
-  navLinkItem.textContent = item;
-  navItemEl.appendChild(navLinkItem);
+const ulEl = document.getElementById('ingredients');
+const liElements = ingredients.map((ingredient) => {
+let liEl = document.createElement('li')
+  liEl.textContent = ingredient;
+  liEl.classList.add('item');
+  return liEl;
+  
 })
-
-// const navLinkItem = document.createElement('li');
-// navLinkItem.classList.add('item');
-// navItemEl.appendChild(navLinkItem);
-
-
-console.log(navItemEl);
+ulEl.append(...liElements);
+console.log(ulEl);;
 
